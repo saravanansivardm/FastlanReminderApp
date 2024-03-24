@@ -55,7 +55,11 @@ desc "Prepare Android Build & Distribute to Firebase App Distribution"
   10.9.Download the json file, paste inside your project and paste the file path in Appfile 
 
 11.**Integrate Slack**
+
   11.1.Watch this video to integrate slack into project 
+  
   11.2.Need to create webhook url first
+  
   11.3.Select slack channel to notify the message
+  
   11.4.Watch this video to create webhook url("https://www.youtube.com/watch?v=6NJuntZSJVA","https://www.youtube.com/watch?v=sxtC40gUS2A")
