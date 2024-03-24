@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "786534136202",
+    "project_id": "githubactioncomposelogin",
+    "storage_bucket": "githubactioncomposelogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786534136202:android:f7b496649de8779be33073",
+        "android_client_info": {
+          "package_name": "com.example.compose_auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsM3dkQN3tW3zRD-Zi9pBkLDmZdSuZaEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786534136202:android:b931f233c2eb775de33073",
+        "android_client_info": {
+          "package_name": "com.example.compose_auth.demo.debugFree"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsM3dkQN3tW3zRD-Zi9pBkLDmZdSuZaEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786534136202:android:fbf5f0e6dc1a4c1ee33073",
+        "android_client_info": {
+          "package_name": "com.example.compose_auth.demo.debugPaid"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsM3dkQN3tW3zRD-Zi9pBkLDmZdSuZaEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786534136202:android:e04265d60b7b4b40e33073",
+        "android_client_info": {
+          "package_name": "com.example.reminderapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsM3dkQN3tW3zRD-Zi9pBkLDmZdSuZaEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DevReminderApp</string>
+    <string name="flavour_name">DevApp</string>
+</resources>

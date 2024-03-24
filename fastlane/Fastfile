@@ -1,0 +1,92 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+ before_all do
+    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+ end
+
+  desc "Prepare Android Testing"
+  lane :testApp do
+  gradle(task: "test")
+  end
+
+  desc "Prepare Android Debug Build"
+  lane :build_debug_android do
+  gradle(
+    task: "assembleDebug",
+  )
+  end
+
+  desc "Increase Version Code"
+  lane :increment_version_code do
+    latest_release = firebase_app_distribution_get_latest_release(
+      app: "1:786534136202:android:c631128d5618fe40e33073"
+    )
+    increment_version_code({ version_code: latest_release[:buildVersion].to_i + 1 })
+  end
+
+  desc "Increase Version Name"
+  lane :increment_version_name do
+  increment_version_code
+    latest_release = firebase_app_distribution_get_latest_release(
+      app: "1:786534136202:android:c631128d5618fe40e33073"
+    )
+    increment_version_code({ version_name: latest_release[:buildVersion].to_i + 1 })
+  end
+
+  desc "Prepare Android Release Build"
+    lane :release_build do
+      gradle(task: "clean assembleRelease")
+    end
+
+  desc "Prepare Android Build & Distribute to Firebase App Distribution"
+  lane :beta_android do
+    release_build
+    firebase_app_distribution(
+      app: "1:786534136202:android:6aa97982f669b7f9e33073",
+      firebase_cli_token: "1//0ghDNvV5SPFHvCgYIARAAGBASNwF-L9IrY-bX_c_UtLJCjnx8WlScSEN96PCfpRfz08QLulAwx1atBERJdLa3Z4aKA_7jytKF2LY",
+      groups: "testers",
+      release_notes:"* New Dev apk file created"
+  )
+  end
+
+  desc "Bump version code and version name"
+  lane :bump_version do
+    # Increment the version code
+    increment_version_code(
+      version_code: get_version_code + 1
+    )
+    # Increment the version name
+    increment_version_name(
+      version_name: get_version_name(bump_type: "minor")
+    )
+  end
+
+  after_all do |lane|
+      slack(
+      message: "Successfully deployed new app"
+      )
+  end
+
+  error do |lane, exception|
+    slack(
+        message: exception.message,
+        success: false
+        )
+  end
+end
