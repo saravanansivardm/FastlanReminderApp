@@ -26,13 +26,13 @@ You can see the newly created ./fastlane directory, with the following files:
 9.Run 1st fastlane command
 
 10.To distribute app through firebase app distribution follow the steps:
-10.1. Add firebase to your project and json file from it
-10.2. Goto App Distribution page integrate project and add testers
-10.3.Install Firebase CLI
-10.4.In CLI- Run Firebase login
-10.5.In command prompt firebase login, 
-10.6.In command prompt firebase login:ci -->It'll redirect to webpage to login the page
-10.7.Once you logged in you'll get a **Firebase token** and paste in **firebase_cli_token**    
+  10.1. Add firebase to your project and json file from it
+  10.2. Goto App Distribution page integrate project and add testers
+  10.3.Install Firebase CLI
+  10.4.In CLI- Run Firebase login 
+  10.5.In command prompt firebase login, 
+  10.6.In command prompt firebase login:ci -->It'll redirect to webpage to login the page
+  10.7.Once you logged in you'll get a **Firebase token** and paste in **firebase_cli_token**    
 desc "Prepare Android Build & Distribute to Firebase App Distribution"
   lane :beta_android do
   release_build
