@@ -2,9 +2,13 @@
 
 **Steps to integrate fastlane into project**
 1.Follow the instructions from fastlane site
+
 2.Setup fastlane on windows(https://www.youtube.com/watch?v=zYBYegeTNwY&t=114s)
+
 3.Install Ruby
+
 4.Add environment variable,
+
 5.Run bundle exec fastlane init(That's it! fastlane will automatically generate a configuration for you based on the information provided.
 You can see the newly created ./fastlane directory, with the following files:
 * **Appfile** which defines configuration information that is global to your app
@@ -12,6 +16,7 @@ You can see the newly created ./fastlane directory, with the following files:
 * **Gemfile and Gemfile.lock** will be created
   )
 5.1.Add package name in the terminal
+
 6.Run bundle exec fastlane action gradle
 7.Run fastlane env
 8.Run bundle exec fastlane install_plugins
