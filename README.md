@@ -2,6 +2,8 @@
 
 **Steps to integrate fastlane into project**
 
+**Note: First of all need regenerate all token,slack webhook,firebase cli token**
+
 1.Follow the instructions from fastlane site
 
 2.Setup fastlane on windows(https://www.youtube.com/watch?v=zYBYegeTNwY&t=114s)
@@ -63,3 +65,13 @@ desc "Prepare Android Build & Distribute to Firebase App Distribution"
   11.3.Select slack channel to notify the message
   
   11.4.Watch this video to create webhook url("https://www.youtube.com/watch?v=6NJuntZSJVA","https://www.youtube.com/watch?v=sxtC40gUS2A")
+
+12.**Run the following commands to setup fastlane and firebase app distribution:**
+
+  12.1.bundle exec fastlane init
+  12.2.bundle exec fastlane add_plugin firebase_app_distribution
+  12.3.bundle exec fastlane install_plugins   
+  12.4.bundle exec fastlane env
+  12.5.bundle exec fastlane action gradle
+  12.6.firebase login
+  12.7.firebase login:ci
