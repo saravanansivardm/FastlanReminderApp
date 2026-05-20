@@ -63,13 +63,13 @@ Prepare Android Release Build
 
 Prepare Android Build & Distribute to Firebase App Distribution
 
-### android bump_version
+### android run_detekt
 
 ```sh
-[bundle exec] fastlane android bump_version
+[bundle exec] fastlane android run_detekt
 ```
 
-Bump version code and version name
+
 
 ----
 
